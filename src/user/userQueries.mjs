@@ -1,8 +1,8 @@
-const { GraphQLID, GraphQLList } = require('graphql');
-const userType = require('./userType');
-const { getUserById, getAllUsers } = require('./userResolvers');
+import { GraphQLID, GraphQLList } from 'graphql';
+import userType from './userType.mjs';
+import { getUserById, getAllUsers }from './userResolvers.mjs';
 
-module.exports = {
+export default {
   user: {
     type: userType,
     args: {

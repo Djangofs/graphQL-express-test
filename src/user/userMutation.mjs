@@ -1,8 +1,8 @@
-const { GraphQLString, GraphQLID } = require('graphql');
-const userType = require('./userType');
-const { createUser } = require('./userResolvers');
+import { GraphQLString, GraphQLID } from 'graphql';
+import userType from './userType.mjs';
+import { createUser } from './userResolvers.mjs';
 
-module.exports = {
+export default {
   createUser: {
     type: userType,
     args: {

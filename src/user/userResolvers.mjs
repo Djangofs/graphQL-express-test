@@ -1,6 +1,6 @@
-const User = require('../db/models/User');
+import User from '../db/models/User.mjs';
 
-const getUserById = ({id}) => {
+export const getUserById = ({id}) => {
   // AUTEHNTICATION
 
   // VALIDATION
@@ -12,7 +12,7 @@ const getUserById = ({id}) => {
   }
 };
 
-const getAllUsers = () => {
+export const getAllUsers = () => {
   // AUTEHNTICATION
 
   // VALIDATION
@@ -21,7 +21,7 @@ const getAllUsers = () => {
   return User.findAll();
 };
 
-const createUser = (user) => {
+export const createUser = (user) => {
   // AUTEHNTICATION
 
   // VALIDATION
@@ -32,5 +32,3 @@ const createUser = (user) => {
       return Promise.reject(err);
     });
 }
-
-module.exports = { getUserById, getAllUsers, createUser };

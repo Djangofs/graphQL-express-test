@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node start.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,5 +15,9 @@
     "graphql": "^0.13.2",
     "pg": "^7.4.1",
     "sequelize": "^4.37.6"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0"
   }
 }
