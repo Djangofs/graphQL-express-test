@@ -6,10 +6,7 @@ export const getUserById = ({id}) => {
   // VALIDATION
 
   // RESOLUTION
-  return {
-    id,
-    firstName: 'Django'
-  }
+  return User.findOne({ where: {id: id} });
 };
 
 export const getAllUsers = () => {
