@@ -1,13 +1,13 @@
 export default (db, Sequelize) => {
-  return db.define('user', {
+  return db.define('order', {
     id: {
       type: Sequelize.INTEGER,
       primaryKey: true
     },
-    firstName: {
+    title: {
       type: Sequelize.STRING
     },
-    lastName: {
+    category: {
       type: Sequelize.STRING
     }
   });

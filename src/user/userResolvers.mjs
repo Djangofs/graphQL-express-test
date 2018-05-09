@@ -1,4 +1,4 @@
-import User from '../db/models/User.mjs';
+import { User } from '../db/db.mjs';
 
 export const getUserById = ({id}) => {
   // AUTEHNTICATION
@@ -6,10 +6,7 @@ export const getUserById = ({id}) => {
   // VALIDATION
 
   // RESOLUTION
-  return {
-    id,
-    firstName: 'Django'
-  }
+  return User.findOne({ where: {id: id} });
 };
 
 export const getAllUsers = () => {

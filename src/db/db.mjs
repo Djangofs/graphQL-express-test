@@ -1,9 +1,15 @@
 import Sequelize from 'sequelize';
-// const sequelize = new Sequelize('postgres://user:pass@example.com:5432/dbname');
-const sequelize = new Sequelize(`postgres://postgres:${process.env.PASS}@localhost:5432/postgres`);
+import createOrder from './models/Order.mjs';
+import createUser from './models/User.mjs';
+import setUpRelations from './models/relationships.mjs';
 
-sequelize
-  .authenticate()
+const db = new Sequelize(`postgres://postgres:${process.env.PASS}@localhost:5432/postgres`);
+const User = createUser(db, Sequelize);
+const Order = createOrder(db, Sequelize);
+setUpRelations({Order, User});
+db.sync();
+
+db.authenticate()
   .then(() => {
     console.log('Connection has been established successfully.');
   })
@@ -11,4 +17,4 @@ sequelize
     console.error('Unable to connect to the database:', err);
   });
 
-export default sequelize;
+export { User, Order };

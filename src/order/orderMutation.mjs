@@ -1,21 +1,24 @@
 import { GraphQLString, GraphQLID } from 'graphql';
-import userType from './userType.mjs';
-import { createUser } from './userResolvers.mjs';
+import orderType from './orderType.mjs';
+import { createOrder } from './orderResolvers.mjs';
 
 export default {
-  type: userType,
+  type: orderType,
   args: {
     id: {
       type: GraphQLID
     },
-    firstName: {
+    userId: {
+      type: GraphQLID
+    },
+    title: {
       type: GraphQLString
     },
-    lastName: {
+    category: {
       type: GraphQLString
     }
   },
   resolve: (root, args) => {
-    return createUser(args);
+    return createOrder(args);
   }
 }
