@@ -1,4 +1,4 @@
-import User from '../db/models/User.mjs';
+import { User } from '../db/db.mjs';
 
 export const getUserById = ({id}) => {
   // AUTEHNTICATION
