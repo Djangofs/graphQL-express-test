@@ -22,7 +22,7 @@ https://blog.graph.cool/top-5-reasons-to-use-graphql-b60cfa683511
 4. Set your database password to the `PASS` environment variable => `export PASS={password}`
 5. Run `npm start` to get going!
 6. The GraphQL API will be running on `localhost:4000`, so navigate to `localhost:4000/graphql` to start using the API
-7. If the web interface isn't your thing, the [Insomnia REST Client](https://insomnia.rest/) has great support for making and sotring GraphQL queries.
+7. If the web interface isn't your thing, the [Insomnia REST Client](https://insomnia.rest/) has great support for making and storing GraphQL queries.
 
 # Queries
 Once the application is set up, a number of queries are possible. No data is initally populated in the database, so first you'll want to create some:
